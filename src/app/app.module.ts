@@ -13,6 +13,13 @@ import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
 import { LoginModule } from './login/login.module';
+import { RouteModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: 'home', component: HomeModule},
+  {path: 'about', component: AboutModule}
+]
+
 
 @NgModule({
   imports: [
