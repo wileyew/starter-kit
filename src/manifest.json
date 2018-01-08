@@ -3,11 +3,12 @@
   "short_name": "ngX-Rocket",
   "start_url": "index.html",
   "display": "standalone",
+  "theme_color": "#f8f9fa",
   "icons": [{
     "src": "assets/QaTestExcellence.png",
     "sizes": "512x512",
     "type": "image/png"
   }],
   "background_color": "#488aff",
-  "theme_color": "#488aff"
+  "theme_color": "#f8f9fa"
 }
