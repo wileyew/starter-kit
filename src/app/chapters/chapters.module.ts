@@ -19,8 +19,5 @@ import { ChaptersComponent } from './chapters.component';
   declarations: [
     ChaptersComponent
   ],
-  providers: [
-    QuoteService
-  ]
 })
-export class HomeModule { }
+export class ChaptersModule { }

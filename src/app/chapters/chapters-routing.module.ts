@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { Route } from '../core/route.service';
 import { extract } from '../core/i18n.service';
-import { AboutComponent } from './about.component';
+import { ChaptersComponent } from './chapters.component';
 
 const routes: Routes = Route.withShell([
   { path: 'chapters', component: ChaptersComponent, data: { title: extract('Chapters') } }
