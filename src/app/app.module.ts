@@ -11,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
 import { RouterModule, Routes } from '@angular/router';
+import { EmbedVideo } from 'ngx-embed-video';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { RouterModule, Routes } from '@angular/router';
     RouterModule,
     HomeModule,
     AboutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    EmbedVideo.forRoot()
   ],
   declarations: [AppComponent],
   providers: [
