@@ -14,7 +14,7 @@ import { ChaptersComponent } from './chapters.component';
     TranslateModule,
     CoreModule,
     SharedModule,
-    ChaptersRoutingModule
+    ChaptersRoutingModule,
   ],
   declarations: [
     ChaptersComponent

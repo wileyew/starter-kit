@@ -1,18 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 
-import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-chapters',
   templateUrl: './chapters.component.html',
   styleUrls: ['./chapters.component.scss']
 })
+
 export class ChaptersComponent implements OnInit {
 
-  version: string = environment.version;
-
-  constructor() { }
 
   ngOnInit() { }
+
+  scroll(index:number) {
+    var element = document.getElementById("deciding");
+   console.log('scroll');
+   console.log(element);
+   // const el = element[index-1] as HTMLElement;
+   element.scrollIntoView({behavior:"smooth"});
+  }
+
 
 }

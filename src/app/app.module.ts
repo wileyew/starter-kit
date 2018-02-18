@@ -12,6 +12,7 @@ import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
 import { RouterModule, Routes } from '@angular/router';
 import { EmbedVideo } from 'ngx-embed-video';
+import { ScrollToModule } from 'ng2-scroll-to-el'
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { EmbedVideo } from 'ngx-embed-video';
     HomeModule,
     AboutModule,
     AppRoutingModule,
-    EmbedVideo.forRoot()
+    EmbedVideo.forRoot(),
+    ScrollToModule.forRoot(),
   ],
   declarations: [AppComponent],
   providers: [
