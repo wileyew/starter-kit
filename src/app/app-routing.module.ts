@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeModule } from './home/home.module';
 import {ChaptersModule} from './chapters/chapters.module'
 import { AboutModule } from './about/about.module';
-import { LoginModule } from './login/login.module';
 
 const routes: Routes = [
   // Fallback when no prior route is matched

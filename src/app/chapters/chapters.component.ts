@@ -12,13 +12,9 @@ export class ChaptersComponent implements OnInit {
 
 @ViewChild("deciding", {read: ElementRef}) deciding: ElementRef;
 
-deciding;
   ngOnInit() { }
   scroll(element: string) {
-   console.log(element);
    var elementHtml = document.getElementById(element);
-   console.log('scroll');
-   console.log('deciding');
    elementHtml.scrollIntoView({behavior:"smooth"});
   }
 
