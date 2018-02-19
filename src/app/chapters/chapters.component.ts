@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef} from '@angular/core';
 
 
 @Component({
@@ -8,16 +8,18 @@ import { Component, OnInit, ViewChild} from '@angular/core';
 })
 
 export class ChaptersComponent implements OnInit {
+  decidingTwo: string = 'Types of Testing and Deciding on Test Automation framework for your team';
 
+@ViewChild("deciding", {read: ElementRef}) deciding: ElementRef;
 
+deciding;
   ngOnInit() { }
-
-  scroll(index:number) {
-    var element = document.getElementById("deciding");
-   console.log('scroll');
+  scroll(element: string) {
    console.log(element);
-   // const el = element[index-1] as HTMLElement;
-   element.scrollIntoView({behavior:"smooth"});
+   var elementHtml = document.getElementById(element);
+   console.log('scroll');
+   console.log('deciding');
+   elementHtml.scrollIntoView({behavior:"smooth"});
   }
 
 
