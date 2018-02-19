@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
+import { LoginModule } from './login/login.module';
 import { AboutModule } from './about/about.module';
 import { RouterModule, Routes } from '@angular/router';
 import { EmbedVideo } from 'ngx-embed-video';
@@ -27,6 +28,7 @@ import { ScrollToModule } from 'ng2-scroll-to-el'
     RouterModule,
     HomeModule,
     AboutModule,
+    LoginModule,
     AppRoutingModule,
     EmbedVideo.forRoot(),
     ScrollToModule.forRoot(),
