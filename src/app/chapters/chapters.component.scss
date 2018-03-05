@@ -13,6 +13,7 @@
 }
 
 .toc_title {
+  margin-top: -17px;
    font-weight: 700;
    text-align: center;
 }
@@ -35,4 +36,15 @@ button {
 
 .scrollLink {
   color: blue;
+}
+
+.chapters-subheadings {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.chapters-video {
+  margin-top: 10px;
+  display: block;
+  margin-left: 306px;
 }

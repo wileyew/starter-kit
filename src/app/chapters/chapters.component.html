@@ -4,7 +4,7 @@
       <span translate>APP_NAME</span>
     </h1>
     <p>
-      <i></i> <span>These chapters are focused on giving quality engineers or developers the skills necessary in order to become excellent software or quality engineers. </span>
+      <i></i> <span>These chapters are focused on giving quality engineers, developers, or anyone interesting in developing the skills necessary in order to become excellent software or quality engineers. </span>
 <span></span>
     </p>
 <div id="toc_container">
@@ -25,7 +25,7 @@
       A release test strategy typically involves planning with a product spec review and then creating a release plan along with an estimate of the release date.
       The following information is what I would typically include in your release test strategy:<br></p>
 <ul type="disc">
-<li>Determine the release date of functionality that will go into production with your scrum team.</li>
+<li>Determine the release date of your minimal viable product that will go into production with your scrum team.</li>
 <li>Determine the features that your team would like to prioritize together. </li>
 <li>Discuss with your team on the framework for automation you'd prefer to use. </li>
 <li>Test Data Management and CICD process </li>
@@ -36,6 +36,59 @@
 <p>
   I know you are looking at this list and saying to yourself, is this really doable?? Yes, it is and don't worry we will break down the aspects of this madness bullet by bullet!
 </p>
-  </div>
+<div id="minimumViable" class="chapters-subheadings">
+  {{mvp}}
 </div>
+<p>
+  Every team must determine the minimal viable product that they want to ship to either internal or external customer.
+  Every team member must coordinate with their teams to determine the release dates for the products they will ship to production.
+  As you self organize with your team, the main topics to address are:
+  1. Has enough value that people are willing to use it or buy it initially.
+  2. Demonstrates enough future benefit to retain early adopters.
+  3. Provides a feedback loop to guide future development.
+</p>
+
+<div id="releaseDate" class="chapters-subheadings">{{releaseDate}}</div>
+<p>
+As a quality enginner, or any role on a product development team, there is knowledge needed to be aware of the plans or estimates that your team will be comitting to as well as
+when your product will actually be shipped to the end customer! I found a great <a href="https://pm.stackexchange.com/questions/16372/how-do-you-schedule-delivery-dates-in-scrum">article</a> that explains the process of how release dates are calculated.
+</p>
+<div id="prioritizedFeatures" class="chapters-subheadings">{{prioritizationOfFeatures}}  </div>
+<p>
+Features must be prioritized by your product owner who controls the intent that will be worked on by the team. The team
+then has weekly grooming sessions thereafterwards to make sure they are working on stories that have clearly defined
+acceptance criteria that breaks down a story into deliverable behavior that the user of the product would normally utilize. For more information please refer to <a href="https://agilevelocity.com/product-owner/5-factors-to-help-prioritize-your-scrum-product-backlog/"> agile velocity</a> which is a great resource on everything agile!
+</p>
+<div id="typesOfAutomationFrameworks" class="chapters-subheadings">{{automationFrameworks}} </div>
+<p>
+  One of the most important questions that quality engineers must consider is the type of test automation framework their team would like to use. I have found this resource helpful in determining which automation framework to use!
+</p>
+<div class="chapters-video">
+<iframe src="//youtube.com/embed/3hHL-BhBW4I" frameborder="0" allowfullscreen width="600" height="400"></iframe>
+</div>
+<br>
+<div id="frameworkLanguage" class= "chapters-subheadings">{{languageFrameworks}} </div>
+<p>
+  One of the biggest decisions that a team will collectively make is the language that they utilize for their test automation. In my own personal opinion, it is important that teams choose the language
+  of their automation framework based upon what they are comfortable with. For example, if a team is utilizing angular javascript for the web application, then it would be important for team members to choose
+  javascript automation framework since it would be the same language as their web application. Glowtouch technologies has a great<a href="https://www.glowtouch.com/blog/testing/how-to-choose-the-right-test-automation-framework/"> article  </a>where they break down the different factors that lead to deciding on the most ideal test automation framework for your team!
+</p>
+<div id="testDataAndCicd" class="chapters-subheadings">{{testDataCicd}}</div>
+<p>
+  Informatica has a great <a href="https://blogs.informatica.com/2016/06/17/the-importance-of-test-data-management-for-devops-part-1/#fbid=msjnI1pGf5A"> article  </a> that explains the importance of maintaining and creating test data both in test environments such as a QA or dev environment as well as production!
+  Once clean test data has been introduced for specific test environments for QA and DEV, it's important to implement a continuous testing solution into your own organization. Sauce labs has a great <a href="https://saucelabs.com/blog/you-cant-do-cicd-without-automated-testing"> article  </a>explaining the significance of test automation within the CICD process and various possible CICD solutions to implement within your own organization.
+  Personally, I have in the past used Jenkins 2.0 as an enterprise product that allows us to implement CICD within our own organization.
+
+  Below is the process that I have implemented in the past for CICD within the Capital One organization:
+  1. Identify tests that will be tagged as smoke or regression tests and tag them with either @smoke, @regression, or assign a feature tag. Tag will be used by job to run those specific tests within the pipeline.
+  2. Create a smoke job that will run sanity checks to verify that your application is sufficiently up and running.
+  3. Create a regression job that will ensure that the critical functionalities of your web application are behaving as expected.
+  4. Schedule the smoke job to run on a morning basis. I normally have our smoke jobs running when I get into the office, around 8-9AM.
+  5. Schedule the regression job to be run on at least a weekly basis. This will also allow you to identify defects within the application that you would not have normally tested.
+  6. Hook your test automation jobs to the delivery pipeline that developers utilize. For example, if code is merged and then successfully deployed to either the QA or dev environments, then create a pipeline that kicks off the smoke test automation.
+  7. If your smoke test automation passes, then the code newly release is then tagged as a candidate for QA and is then released into the QA environment.
+
+  Every organization has a responsibility for quality code, ensure that you discuss your CICD strategy with the entire team to get appropriate feedback and developing a viable solution.
+</p>
+<div id="perfTesting" class="chapters-subheadings">{{perfTesting}} </div>
 </div>
