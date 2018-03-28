@@ -15,6 +15,12 @@ export class ChaptersComponent implements OnInit {
   mvp: string = 'Minimal Viable Product'
   testDataCicd: string = 'Test Data Management and CICD'
   perfTesting: string= 'Performance Testing the UI and API of your web application'
+  blazemeter: string= 'How to use blaze meter to create performance test scripts'
+  atdd: string= 'Automated Test Driven Development'
+  automationFrameworks: string='Types of Automation Frameworks'
+  locators: string='Types of Locators and Best Method for Identifying Locators'
+  cucumberFeatures: string='Cucumber Feature file, step defintions, and page objects'
+  whenToAutomateStories: string='When Do You Automate Your Stories?'
 
 @ViewChild("deciding", {read: ElementRef}) deciding: ElementRef;
 

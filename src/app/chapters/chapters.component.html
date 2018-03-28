@@ -16,9 +16,15 @@
     <button (click)="scroll('minimumViable')" id="mvpProduct" class="scrollLink">Minimum Viable Product</button><br>
     <button (click)="scroll('releaseDate')" id="release" class="scrollLink">Release Dates</button><br>
     <button (click)="scroll('prioritizedFeatures')" id="prioritization" class="scrollLink">Prioritization of Features</button><br>
-    <button (click)="scroll('typesOfAutomationFrameworks')" id="prioritization" class="scrollLink">Types of Automation Frameworks</button><br>
-<button (click)="scroll('testDataAndCicd')" id="testData" class="scrollLink">Test Data Management and CICD</button><br>
-<button (click)="scroll('perfTesting')" id="performance" class="scrollLink">Performance Testing</button><br>
+    <button (click)="scroll('typesOfAutomationFrameworks')" id="typesOfAutomationFrameworkLabel" class="scrollLink">Types of Automation Frameworks</button><br>
+    <button (click)="scroll('testDataAndCicd')" id="testDataLabel" class="scrollLink">Test Data Management and CICD</button><br>
+    <button (click)="scroll('perfTesting')" id="performanceLabel" class="scrollLink">Performance Testing</button><br>
+    <button (click)="scroll('blazeMeter')" id="blazeMeterLabel" class="scrollLink">Blaze Meter Tutorial</button><br>
+    <button (click)="scroll('atdd')" id="atddLabel" class="scrollLink">Automated Test Driven Development (ATDD)</button><br>
+    <button (click)="scroll('locators')" id="locatorsLabel" class="scrollLink">Locators</button><br>
+    <button (click)="scroll('cucumberFeatureStepPage')" id="cucumberFeatureLabel" class="scrollLink">Cucumber Feature, Step Defition, and Page Objects</button><br>
+    <button (click)="scroll('whenToAutomate')" id="whenToAutomateLabel" class="scrollLink">When Should You Automate You Automate Your Stories?</button><br>
+
   </ul>
 </ul>
 </div>
@@ -103,4 +109,91 @@ acceptance criteria that breaks down a story into deliverable behavior that the 
   The product owner for your team, or the person from your team handling the business side of your application must understand the transactions per second an application must handle.
   Once the desired transactions per second is determined by your product owner, it is important to do stress testing or load testing of the web application. This will allow the user to determine the maximum load a web application can withstand.
 </p>
-</div>
+<div id="blazeMeter" class="chapters-subheadings">{{blazemeter}} </div>
+<p>
+Blazemeter is a tool that allows you to create performance test scripts in your UI. By using the Blazemeter plugin,
+you are able to record by naming a test script with the chrome plugin, stop the recording when the flow of the UI performance script
+has been completed. You can then export the completed blazemeter file into a jmx file and modify the jmx file based upon the performance script flow.
+Below is an example tutorial of how to create a UI performance script using Blazemeter:
+</p>
+
+<div id="atdd" class="chapters-subheadings">{{atdd}}</div>
+<p>
+Automated Test Driven Development is a practice where anyone on a team, either a developer or a QA person, creates automated test scripts
+ that validates the functionality of a particular story.
+For example, if there is a story for a login page whereby a valid user, who has already registered,
+can sign in to a dashboard,then a QA or developer would create a test script that automates the particular functionality.
+The automated script first needs to start with gherkin, otherwise known as Given When Then format. Let's go step by step on how to write gherkin by using the example above:<br><br>
+
+Scenario: Validate that an adminstrator can login to the website<br>
+Given I am an administrator<br>
+When I login to the website<br>
+Then I will be able to see the dashboard<br>
+And I will be able to see a list of users that are registered on the site<br><br>
+The behaviors listed in the scenario above, we can understand the scenario that will be tested. Either the product owner for the team or the scrum master (preferably product owner),
+
+</p>
+<div id="locators" class="chapters-subheadings">{{locators}}</div>
+<p>
+Locators are essential for having stable test automation frameworks. If you do not have good locators within your script, your tests will fail or become brittle over time.
+A good example of non brittle locators are scripts that contain unique identifiers are the following:
+</p>
+<ul>
+  <li>Unique id or css name for an element</li>
+  <li>If no unique id available then use the relative path double forward slash (//)</li>
+  <li>Use a combination of locators such as name, linkText, className, partial link text, and css.</li>
+  <li>Avoid absolute xpath!!!</li>
+</ul>
+<p>
+Below is also a video explaining how to use jquery selectors in order to have uniquely identified elements:
+</p>
+<div id="cucumberFeatureStepPage" class="chapters-subheadings"> {{cucumberFeatures}}</div>
+<p>
+To fully understand this section, please read the section above on ATDD (Automated Test Driven Development.) Let's break down each section:
+</p>
+<div>Feature file (.feature)</div>
+<ul>
+  <li>Contains the Given, And, When, Then (otherwise known as gherkin)</li>
+  <li>Contains Scenarios that relate back to the feature developed as well as Scenario
+    Outlines which give test data inserted within the gherkin which will be used
+    as test data or variables within your step definitons and/or page object file.</li>
+</ul>
+<div>Step Definitions</div>
+<ul>
+  <li>Mapped directly to the gherkin statement (can be a Given When And or Then statement)</li>
+  <li>Contains Scenarios that relate back to the feature developed as well as Scenario
+    Outlines which give test data inserted within the gherkin which will be used
+    as test data or variables within your step definitons and/or page object file.</li>
+</ul>
+<div>Page Objects</div>
+<ul>
+<li>The methods within page objects map directly to the method called within the step defition. For example,
+  a step definition could contain a method call named basePage.getUrl().
+  This method call would be invoked within the base page and the page object in this case would be the base page.</li>
+</ul>
+<div>To see the feature, step defintion, and page object modeling in action, please watch the following video:</div>
+<br>
+<div id="whenToAutomate" class="chapters-subheadings"> {{whenToAutomateStories}} </div>
+<p>
+  How do we know when to automate stories? Well, there are multiple factors to consider before automating an agile story:
+</p>
+
+  <ul>
+    <li>Is the story size feasible to be automated?</li>
+    <li>Is the story of critical nature to be automated?</li>
+    <li>If you are not able to automate the story, can someone on your team automate the story as well as test it?</li>
+  </ul>
+<p>
+  The first question, is the story size feasible to be automated is very important. If the story is too large or complex, it will be difficult to automate within a sprint.
+  My suggestion would be to talk to your team about the possibility of breaking down the story into smaller chunks or possibly automating just the critical functionalities
+  within the story to sizable chunks.
+<br/><br/>
+Rating the importance of the scenario to be automated is a huge question to ponder. If you are not able to determine the low medium or high importance of the scenario,
+discuss the rating with your scrum team. Usually within test automation, the rule of
+thumb would be to automate at least 80% of your medium rated scenarios and 100% of your critical scenarios.
+<br/><br/>
+If you are not able to automate the story as a QA associate or contractor, there should be someone else on your team that knows how to do test automation. When I was working
+with my previous team within Capital One, I trained all of them to do test automation. While I was working on development stories, I was able to cross train them on test
+automation. By the time I para programmed with them on a couple of stories for test automation, they were all doing the test automation independently! Not only will it feel great to teach a coworker a new skill
+but your team will become efficient and fungible. This reemphasizes the philosophy that we should all know how to automate and tackle development stories!
+</p>
