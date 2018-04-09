@@ -21,6 +21,7 @@ export class ChaptersComponent implements OnInit {
   locators: string='Types of Locators and Best Method for Identifying Locators'
   cucumberFeatures: string='Cucumber Feature file, step defintions, and page objects'
   whenToAutomateStories: string='When Do You Automate Your Stories?'
+   futureOfTestAIAutomation: string='Future of AI in Test Automation'
 
 @ViewChild("deciding", {read: ElementRef}) deciding: ElementRef;
 
