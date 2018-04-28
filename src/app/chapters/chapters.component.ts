@@ -22,6 +22,7 @@ export class ChaptersComponent implements OnInit {
   cucumberFeatures: string='Cucumber Feature file, step defintions, and page objects'
   whenToAutomateStories: string='When Do You Automate Your Stories?'
    futureOfTestAIAutomation: string='Future of AI in Test Automation'
+   moreMaterialIsComing: string='More Material is Coming!'
 
 @ViewChild("deciding", {read: ElementRef}) deciding: ElementRef;
 
