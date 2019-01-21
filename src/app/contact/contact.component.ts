@@ -4,10 +4,10 @@ import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class ContactComponent implements OnInit {
 
   version: string = environment.version;
 

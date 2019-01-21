@@ -3,10 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { Route } from '../core/route.service';
 import { extract } from '../core/i18n.service';
-import { AboutComponent } from './about.component';
+import { ContactComponent } from './contact.component';
 
 const routes: Routes = Route.withShell([
-  { path: 'about', component: AboutComponent, data: { title: extract('About') } }
+  { path: 'contact', component: ContactComponent, data: { title: extract('Contact') } }
 ]);
 
 @NgModule({
@@ -14,4 +14,4 @@ const routes: Routes = Route.withShell([
   exports: [RouterModule],
   providers: []
 })
-export class AboutRoutingModule { }
+export class ContactRoutingModule { }
